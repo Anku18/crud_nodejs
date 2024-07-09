@@ -5,7 +5,7 @@ const app = express()
 
 //Middleware
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 //routes
 
@@ -76,7 +76,7 @@ app.delete('/api/delete/product/:id', async (req, res) => {
     }
 })
 
-mongoose.connect('mongodb+srv://ankushvarma006:R879ZdH1br9Xt551@cluster0.s3i3kec.mongodb.net/Node-API?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://pamit7407084:SMFJObwJ39tEtHY0@hospital.uoclb4y.mongodb.net/hospitalDev?retryWrites=true&w=majority&appName=hospital')
     .then(() => {
         console.log('Connected to database!');
         app.listen(3000, () => {
