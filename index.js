@@ -76,7 +76,7 @@ app.delete('/api/delete/product/:id', async (req, res) => {
     }
 })
 
-mongoose.connect('mongodb+srv://pamit7407084:SMFJObwJ39tEtHY0@hospital.uoclb4y.mongodb.net/hospitalDev?retryWrites=true&w=majority&appName=hospital')
+mongoose.connect('mongodb+srv://ankushvarma006:ufamfPkY7ne6riOx@cluster.jqnl1od.mongodb.net/crudDB?retryWrites=true&w=majority&appName=Cluster')
     .then(() => {
         console.log('Connected to database!');
         app.listen(3000, () => {
@@ -86,3 +86,5 @@ mongoose.connect('mongodb+srv://pamit7407084:SMFJObwJ39tEtHY0@hospital.uoclb4y.m
     .catch(() => {
         console.log("Connection failed!")
     });
+
+// ufamfPkY7ne6riOx
