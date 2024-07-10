@@ -76,15 +76,16 @@ app.delete('/api/delete/product/:id', async (req, res) => {
     }
 })
 
-mongoose.connect('mongodb+srv://ankushvarma006:ufamfPkY7ne6riOx@cluster.jqnl1od.mongodb.net/crudDB?retryWrites=true&w=majority&appName=Cluster')
+const uri = 'mongodb+srv://ankushvarma006:ufamfPkY7ne6riOx@cluster.jqnl1od.mongodb.net/crudDB?retryWrites=true&w=majority&appName=Cluster';
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to database!');
         app.listen(3000, () => {
             console.log('Server is running on port 3000');
         });
     })
-    .catch(() => {
-        console.log("Connection failed!")
+    .catch((error) => {
+        console.error('Connection failed!', error);
     });
-
 // ufamfPkY7ne6riOx
